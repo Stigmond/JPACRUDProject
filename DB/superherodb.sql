@@ -23,15 +23,21 @@ DROP TABLE IF EXISTS `superhero` ;
 CREATE TABLE IF NOT EXISTS `superhero` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `alias` VARCHAR(45) NULL DEFAULT 'Unknown',
+  `year_introduced` INT(4) NOT NULL,
+  `affiliation` VARCHAR(45) NULL DEFAULT 'Unknown',
+  `nemesis` VARCHAR(45) NULL DEFAULT 'Unknown',
+  `location` VARCHAR(45) NULL DEFAULT 'Unknown',
+  `powers` VARCHAR(500) NULL DEFAULT 'Undetermined',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
-DROP USER IF EXISTS herouser@localhost;
+DROP USER IF EXISTS herouser;
 SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-CREATE USER 'herouser'@'localhost' IDENTIFIED BY 'herouser';
+CREATE USER 'herouser' IDENTIFIED BY 'herouser';
 
-GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'herouser'@'localhost';
+GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'herouser';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
@@ -42,7 +48,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `superherodb`;
-INSERT INTO `superhero` (`id`, `name`) VALUES (1, 'Superman');
+INSERT INTO `superhero` (`id`, `name`, `alias`, `year_introduced`, `affiliation`, `nemesis`, `location`, `powers`) VALUES (1, 'Superman', 'Clark Kent', 1939, 'Justice League', 'Lex Luthor', 'Metropolis', 'leap tall buildings in a single bound');
 
 COMMIT;
 

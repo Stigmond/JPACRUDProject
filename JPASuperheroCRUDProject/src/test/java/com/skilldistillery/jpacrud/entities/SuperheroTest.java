@@ -45,6 +45,12 @@ class SuperheroTest {
 	void test_Superhero_entity_mapping() {
 		assertNotNull(superhero);
 		assertEquals("Superman", superhero.getName());
+		assertEquals("Clark Kent", superhero.getAlias());
+		assertEquals(1939, superhero.getYearIntroduced());
+		assertEquals("Justice League", superhero.getAffiliation());
+		assertEquals("Lex Luthor", superhero.getNemesis());
+		assertEquals("Metropolis", superhero.getLocation());
+		assertEquals("leap tall buildings in a single bound", superhero.getPowers());
 	}
 
 }
