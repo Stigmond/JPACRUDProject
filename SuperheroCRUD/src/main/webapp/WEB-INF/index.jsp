@@ -11,7 +11,7 @@
 	<h1>Welcome to Cerebro</h1>
 
 	<form action="getHero.do">
-		Hero ID# <input type="text" name="id"/> <input type="submit"
+		Hero ID# <input type="number" name="id" min="1" required/> <input type="submit"
 			value="Show Superhero"/>
 	</form>
 	<br>

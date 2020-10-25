@@ -22,6 +22,6 @@
 <form action="updateHero.do">
 <button type="submit" name="id" value="${hero.id}">Update</button>
 </form>
-
+<a href="/">Return to Main</a>
 </body>
 </html>

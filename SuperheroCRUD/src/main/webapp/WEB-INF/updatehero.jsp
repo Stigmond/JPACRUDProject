@@ -27,6 +27,6 @@
 	<input type="text" name="powers" value="${hero.powers}">
 	<input type="submit">
 	</form>
-	
+<a href="/">Return to Main</a>
 </body>
 </html>

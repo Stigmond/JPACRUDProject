@@ -25,5 +25,6 @@
 	<input type="text" name="powers" value="undetermined">
 	<input type="submit">
 	</form>
+	<a href="/">Return to Main</a>
 </body>
 </html>
