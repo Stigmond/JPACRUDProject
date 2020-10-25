@@ -32,7 +32,6 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 	@Override
 	public Superhero addHero(Superhero hero) {
 		Superhero newHero = hero;
-//		String query = "INSERT INTO superhero (name, alias, yearIntroduced, affiliation, nemesis, location, powers) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		em.persist(hero);
 		return newHero;
 	}
