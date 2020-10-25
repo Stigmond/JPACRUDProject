@@ -5,9 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Result</title>
+<title>${hero.name}</title>
 </head>
 <body>
-<p>${hero.name}</p>
+<div>Superhero Name: ${hero.name}</div>
+<div>Superhero Alias: ${hero.alias}</div>
+<div>Year Introduced: ${hero.yearIntroduced}</div>
+<div>Team Affiliation: ${hero.affiliation}</div>
+<div>Archnemesis: ${hero.nemesis}</div>
+<div>Located: ${hero.location}</div>
+<div>Description of Power(s): ${hero.powers}</div>
 </body>
 </html>
