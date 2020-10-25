@@ -31,8 +31,16 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 	@Transactional
 	@Override
 	public Superhero addHero(Superhero hero) {
-		Superhero newHero = hero;
 		em.persist(hero);
-		return newHero;
+		return hero;
 	}
+
+	@Override
+	public Superhero deleteHero(int id) {
+		Superhero heroToRemove = em.find(Superhero.class, id);
+		em.remove(heroToRemove);
+		return heroToRemove;
+	}
+
+
 }

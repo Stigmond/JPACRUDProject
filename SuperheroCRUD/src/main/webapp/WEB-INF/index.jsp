@@ -21,7 +21,7 @@
 	<label for="alias">Alias</label><br>
 	<input type="text" name="alias"><br>
 	<label for="yearIntroduced">Year Introduced</label><br>
-	<input type="text" name="yearIntroduced"><br>
+	<input type="number" name="yearIntroduced"><br>
 	<label for="affiliation">Affiliation</label><br>
 	<input type="text" name="affiliation"><br>
 	<label for="nemesis">Nemesis</label><br>
@@ -44,7 +44,10 @@
 			<tr>
 			<td>${hero.id}</td>
 			<td>${hero.name}</td>
-			<td><button>More Info</button> <button>Edit</button><td>
+			<td><button>More Info</button> <button>Edit</button>
+				<form action="deleteHero.do">
+					<button type="submit" name="id" value="${hero.id}">Delete</button>
+				</form></td>
 			<tr>
 			</c:forEach>
 		</tbody>

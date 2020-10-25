@@ -12,20 +12,13 @@ public class Superhero {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-
 	private String name;
-
 	private String alias;
-	
 	@Column(name="year_introduced")
 	private int yearIntroduced;
-	
 	private String affiliation;
-	
 	private String nemesis;
-	
 	private String location;
-	
 	private String powers;
 	
 	public Superhero() {

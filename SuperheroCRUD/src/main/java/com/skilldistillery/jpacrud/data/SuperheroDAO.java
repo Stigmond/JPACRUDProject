@@ -9,4 +9,5 @@ public interface SuperheroDAO {
 	public Superhero findHeroById(int id);
 	public List<Superhero> getAllHeroes();
 	public Superhero addHero(Superhero hero);
+	public Superhero deleteHero(int id);
 }

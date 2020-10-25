@@ -44,4 +44,20 @@ public class SuperheroController {
 		mv.setViewName("heroadded");
 		return mv;
 	}
+	
+	@RequestMapping(path="deleteHero.do")
+	public ModelAndView deleteHero(int id, RedirectAttributes redir) {
+		ModelAndView mv = new ModelAndView();
+		redir.addFlashAttribute("hero", dao.deleteHero(id));
+		mv.setViewName("redirect:heroDeleted.do");
+		return mv;
+	}
+	
+	@RequestMapping(path="heroDeleted.do")
+	public ModelAndView deleted() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("herodeleted");
+		return mv;
+	}
+	
 }
