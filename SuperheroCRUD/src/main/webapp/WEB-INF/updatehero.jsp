@@ -10,13 +10,13 @@
 <body>
 
 <form action="makeUpdates.do">
-	<input type="hidden" name="id" value="${hero.id}">
+	<input type="hidden" name="id" value="${hero.id}" required>
 	<label for="name">Name</label><br>
 	<input type="text" name="name" value="${hero.name} "><br>
 	<label for="alias">Alias</label><br>
 	<input type="text" name="alias" value="${hero.alias}"><br>
 	<label for="yearIntroduced">Year Introduced</label><br>
-	<input type="number" name="yearIntroduced" value="${hero.yearIntroduced}"><br>
+	<input type="number" name="yearIntroduced" value="${hero.yearIntroduced}" min="1900" required><br>
 	<label for="affiliation">Affiliation</label><br>
 	<input type="text" name="affiliation" value="${hero.affiliation}"><br>
 	<label for="nemesis">Nemesis</label><br>
