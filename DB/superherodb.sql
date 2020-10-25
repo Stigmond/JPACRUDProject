@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `superhero` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `alias` VARCHAR(45) NULL DEFAULT 'Unknown',
-  `year_introduced` INT(4) NOT NULL,
+  `year_introduced` INT(4) NULL DEFAULT 2000,
   `affiliation` VARCHAR(45) NULL DEFAULT 'Unknown',
   `nemesis` VARCHAR(45) NULL DEFAULT 'Unknown',
   `location` VARCHAR(45) NULL DEFAULT 'Unknown',

@@ -32,6 +32,7 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 	@Override
 	public Superhero addHero(Superhero hero) {
 		em.persist(hero);
+		em.flush();
 		return hero;
 	}
 
@@ -39,6 +40,7 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 	public Superhero deleteHero(int id) {
 		Superhero heroToRemove = em.find(Superhero.class, id);
 		em.remove(heroToRemove);
+		em.flush();
 		return heroToRemove;
 	}
 
@@ -52,6 +54,7 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 		heroToChange.setNemesis(updatedHero.getNemesis());
 		heroToChange.setLocation(updatedHero.getLocation());
 		heroToChange.setPowers(updatedHero.getPowers());
+		em.flush();
 		return heroToChange;
 	}
 

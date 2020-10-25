@@ -32,6 +32,10 @@ public class SuperheroController {
 	
 	@RequestMapping(path = "addHero.do")
 	public ModelAndView addHero(Superhero superhero, RedirectAttributes redir) {
+		if (superhero.getName().equals("")) {
+			superhero.setName("Unknown");
+		}
+	
 		ModelAndView mv = new ModelAndView();
 		redir.addFlashAttribute("hero", dao.addHero(superhero));
 		mv.setViewName("redirect:heroAdded.do");
@@ -78,11 +82,15 @@ public class SuperheroController {
 	@RequestMapping(path="makeUpdates.do")
 	public ModelAndView update(Superhero superhero, RedirectAttributes redir) {
 		ModelAndView mv = new ModelAndView();
+		if (superhero.getName().equals("")) {
+			superhero.setName(dao.findHeroById(superhero.getId()).getName());
+		}
 		System.out.println(superhero);
 		redir.addFlashAttribute("hero", dao.updateHero(superhero));
 		mv.setViewName("redirect:heroUpdated.do");
 		return mv;
 }
+	
 	@RequestMapping(path="heroUpdated.do")
 	public ModelAndView updated() {
 		ModelAndView mv = new ModelAndView();
