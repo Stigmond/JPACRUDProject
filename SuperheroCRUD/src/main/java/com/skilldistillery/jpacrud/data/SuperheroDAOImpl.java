@@ -42,5 +42,18 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 		return heroToRemove;
 	}
 
+	@Override
+	public Superhero updateHero(Superhero updatedHero) {
+		Superhero heroToChange = em.find(Superhero.class, updatedHero.getId());
+		heroToChange.setName(updatedHero.getName());
+		heroToChange.setAlias(updatedHero.getAlias());
+		heroToChange.setYearIntroduced(updatedHero.getYearIntroduced());
+		heroToChange.setAffiliation(updatedHero.getAffiliation());
+		heroToChange.setNemesis(updatedHero.getNemesis());
+		heroToChange.setLocation(updatedHero.getLocation());
+		heroToChange.setPowers(updatedHero.getPowers());
+		return heroToChange;
+	}
+
 
 }

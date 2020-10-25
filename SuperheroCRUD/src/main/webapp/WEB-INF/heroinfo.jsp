@@ -15,5 +15,13 @@
 <div>Archnemesis: ${hero.nemesis}</div>
 <div>Located: ${hero.location}</div>
 <div>Description of Power(s): ${hero.powers}</div>
+<form action="deleteHero.do">
+<button type="submit" name="id" value="${hero.id}">Delete</button>
+
+</form>
+<form action="updateHero.do">
+<button type="submit" name="id" value="${hero.id}">Update</button>
+</form>
+
 </body>
 </html>

@@ -10,28 +10,16 @@
 <body>
 	<h1>Welcome to Cerebro</h1>
 
-	<form action="getHero.do" method="GET">
-		Hero ID# <input type="text" name="id" /> <input type="submit"
-			value="Show Superhero" />
+	<form action="getHero.do">
+		Hero ID# <input type="text" name="id"/> <input type="submit"
+			value="Show Superhero"/>
+	</form>
+	<br>
+	<form action="gotoaddpage.do">
+		<input type="submit" value="Add Superhero"/>
 	</form>
 	<hr>
-	<form action="addHero.do">
-	<label for="name">Name</label><br>
-	<input type="text" name="name"><br>
-	<label for="alias">Alias</label><br>
-	<input type="text" name="alias"><br>
-	<label for="yearIntroduced">Year Introduced</label><br>
-	<input type="number" name="yearIntroduced"><br>
-	<label for="affiliation">Affiliation</label><br>
-	<input type="text" name="affiliation"><br>
-	<label for="nemesis">Nemesis</label><br>
-	<input type="text" name="nemesis"><br>
-	<label for="location">Location</label><br>
-	<input type="text" name="location"><br>
-	<label for="powers">Powers</label><br>
-	<input type="text" name="powers">
-	<input type="submit">
-	</form>
+	
 	<table>
 		<thead>
 			<tr>
@@ -43,11 +31,7 @@
 			<c:forEach var="hero" items="${heroes}">
 			<tr>
 			<td>${hero.id}</td>
-			<td>${hero.name}</td>
-			<td><button>More Info</button> <button>Edit</button>
-				<form action="deleteHero.do">
-					<button type="submit" name="id" value="${hero.id}">Delete</button>
-				</form></td>
+			<td><a href="getHero.do?id=${hero.id}">${hero.name}</a></td>
 			<tr>
 			</c:forEach>
 		</tbody>

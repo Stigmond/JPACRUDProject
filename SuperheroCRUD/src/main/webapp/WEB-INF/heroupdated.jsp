@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Successful Deletion</title>
+<title>Successful Update</title>
 </head>
 <body>
-<h1>${hero.name} Successfully Deleted!</h1>
+<h1>${hero.name} Successfully Updated!</h1>
 <a href="/">Return to Main</a>
 </body>
 </html>

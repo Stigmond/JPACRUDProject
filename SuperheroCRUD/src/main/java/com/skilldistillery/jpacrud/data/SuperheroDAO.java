@@ -6,8 +6,10 @@ import com.skilldistillery.jpacrud.entities.Superhero;
 
 public interface SuperheroDAO {
 
-	public Superhero findHeroById(int id);
-	public List<Superhero> getAllHeroes();
-	public Superhero addHero(Superhero hero);
-	public Superhero deleteHero(int id);
+	public Superhero addHero(Superhero hero);//Create
+	public Superhero findHeroById(int id);//Read
+	public List<Superhero> getAllHeroes();//Read
+	public Superhero updateHero(Superhero updatedHero);//Update
+	public Superhero deleteHero(int id);//Delete
+
 }

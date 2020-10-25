@@ -60,4 +60,33 @@ public class SuperheroController {
 		return mv;
 	}
 	
+	@RequestMapping(path="gotoaddpage.do")
+	public ModelAndView newPage() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("addhero");
+		return mv;
+	}
+	
+	@RequestMapping(path="updateHero.do")
+	public ModelAndView update(int id) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("hero", dao.findHeroById(id));
+		mv.setViewName("updatehero");
+		return mv;
+	}
+	
+	@RequestMapping(path="makeUpdates.do")
+	public ModelAndView update(Superhero superhero, RedirectAttributes redir) {
+		ModelAndView mv = new ModelAndView();
+		System.out.println(superhero);
+		redir.addFlashAttribute("hero", dao.updateHero(superhero));
+		mv.setViewName("redirect:heroUpdated.do");
+		return mv;
+}
+	@RequestMapping(path="heroUpdated.do")
+	public ModelAndView updated() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("heroupdated");
+		return mv;
+	}
 }
