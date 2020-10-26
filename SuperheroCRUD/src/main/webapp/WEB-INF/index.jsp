@@ -21,8 +21,8 @@
 		</form>
 		<hr>
 
-		<table>
-			<thead>
+		<table class="table table-striped table-hover">
+			<thead class="thead thead-dark">
 				<tr>
 					<th>ID #</th>
 					<th>Superhero</th>
@@ -55,3 +55,4 @@
 	integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
 	crossorigin="anonymous"></script>
 </html>
+
