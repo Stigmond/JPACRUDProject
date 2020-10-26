@@ -18,17 +18,15 @@ public class SuperheroDAOImpl implements SuperheroDAO {
 	private EntityManager em;
 	
 	public Superhero findHeroById(int id) {
-	
-		return em.find(Superhero.class,  id);
+		return em.find(Superhero.class, id);
 	}
 
 	@Override
 	public List<Superhero> getAllHeroes() {
-		String query = "SELECT s from Superhero s";
+		String query = "SELECT s from Superhero s ORDER BY name";
 		return em.createQuery(query, Superhero.class).getResultList();
 	}
 	
-	@Transactional
 	@Override
 	public Superhero addHero(Superhero hero) {
 		em.persist(hero);

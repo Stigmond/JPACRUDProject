@@ -27,6 +27,7 @@ public class SuperheroController {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("hero", dao.findHeroById(id));
 		mv.setViewName("heroinfo");
+		System.out.println(mv.toString());
 		return mv;
 	}
 	

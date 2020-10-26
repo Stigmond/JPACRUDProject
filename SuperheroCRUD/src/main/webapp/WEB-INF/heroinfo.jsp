@@ -8,6 +8,11 @@
 <title>${hero.name}</title>
 </head>
 <body>
+<c:choose>
+<c:when test="${empty hero }">
+<div><h3>No Superhero Found!</h3></div>
+</c:when>
+<c:otherwise>
 <div>Superhero Name: ${hero.name}</div>
 <div>Superhero Alias: ${hero.alias}</div>
 <div>Year Introduced: ${hero.yearIntroduced}</div>
@@ -22,6 +27,9 @@
 <form action="updateHero.do">
 <button type="submit" name="id" value="${hero.id}">Update</button>
 </form>
+</c:otherwise>
+</c:choose>
+
 <a href="/">Return to Main</a>
 </body>
 </html>
