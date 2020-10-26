@@ -28,7 +28,7 @@
 	<input type="text" name="powers" value="${hero.powers}">
 	<input type="submit">
 	</form>
-<a href="/">Return to Main</a>
+<a href="home.do">Return to Main</a>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@ public class SuperheroController {
 
 	@Autowired
 	private SuperheroDAO dao;
-	@RequestMapping(path = "/")
+	@RequestMapping(path = { "/", "home.do"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("heroes", dao.getAllHeroes());

@@ -13,19 +13,22 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h1>Welcome to Cerebro</h1>
-
+		<div class="row">
+		<div class="col"><h1>Welcome to Cerebro</h1></div>
+		</div>
+		<div class="row">
 		<form action="getHero.do">
-			Hero ID# <input type="number" name="id" min="1" required /> <input
-				type="submit" value="Show Superhero" />
+			<div class="col">Hero ID# <input type="number" name="id" min="1" required /> 
+			<button type="submit" class="btn btn-primary btn-sm">Show Superhero</button></div>
 		</form>
+		</div>
 		<hr>
 
 		<table class="table table-striped table-hover">
 			<thead class="thead thead-dark">
 				<tr>
 					<th>ID #</th>
-					<th>Superhero</th>
+					<th>SUPERHERO</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,7 +42,7 @@
 		</table>
 		<hr>
 		<form action="gotoaddpage.do">
-			<input type="submit" value="Add Superhero" />
+			<button type="submit" class="btn btn-primary">Add Superhero</button>
 		</form>
 	</div>
 </body>
