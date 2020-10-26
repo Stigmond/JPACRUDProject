@@ -18,7 +18,7 @@
 	<input type="text" name="alias" value="${hero.alias}"><br>
 	<label for="yearIntroduced">Year Introduced</label><br>
 	<input type="number" name="yearIntroduced" value="${hero.yearIntroduced}" min="1900" required><br>
-	<label for="affiliation">Affiliation</label><br>
+	<label for="affiliation">Affiliation(s)</label><br>
 	<input type="text" name="affiliation" value="${hero.affiliation}"><br>
 	<label for="nemesis">Nemesis</label><br>
 	<input type="text" name="nemesis" value="${hero.nemesis}"><br>

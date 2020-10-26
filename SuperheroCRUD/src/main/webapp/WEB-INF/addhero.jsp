@@ -3,8 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Add Hero</title>
 </head>
@@ -18,7 +18,7 @@
 	<input type="text" name="alias" value="unknown"><br>
 	<label for="yearIntroduced">Year Introduced</label><br>
 	<input type="number" name="yearIntroduced" min="1900" value="1900" required><br>
-	<label for="affiliation">Affiliation</label><br>
+	<label for="affiliation">Affiliation(s)</label><br>
 	<input type="text" name="affiliation" value="unknown"><br>
 	<label for="nemesis">Nemesis</label><br>
 	<input type="text" name="nemesis" value="unknown"><br>

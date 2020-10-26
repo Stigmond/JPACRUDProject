@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>${hero.name}</title>
 </head>
@@ -14,20 +15,30 @@
 <h3>No Superhero Found!</h3>
 </c:when>
 <c:otherwise>
-<div>Superhero Name: ${hero.name}</div>
-<div>Superhero Alias: ${hero.alias}</div>
-<div>Year Introduced: ${hero.yearIntroduced}</div>
-<div>Team Affiliation: ${hero.affiliation}</div>
-<div>Archnemesis: ${hero.nemesis}</div>
-<div>Located: ${hero.location}</div>
-<div>Description of Power(s): ${hero.powers}</div>
+<table>
+<tr><td>Superhero Name:</td><td>${hero.name}</td></tr>
+<tr><td>Superhero Alias:</td><td>${hero.alias}</td></tr>
+<tr><td>Year Introduced:</td><td>${hero.yearIntroduced}</td></tr>
+<tr><td>Team Affiliation(s):</td><td>${hero.affiliation}</td></tr>
+<tr><td>Archnemesis:</td><td>${hero.nemesis}</td></tr>
+<tr><td>Located:</td><td>${hero.location}</td></tr>
+<tr><td>Description of Power(s):</td><td>${hero.powers}</td></tr>
+<tr>
+</table>
+<table>
+<tr>
+<td>
 <form action="deleteHero.do">
 <button type="submit" name="id" value="${hero.id}">Delete</button>
-
 </form>
+</td>
+<td>
 <form action="updateHero.do">
 <button type="submit" name="id" value="${hero.id}">Update</button>
 </form>
+</td>
+<tr>
+</table>
 </c:otherwise>
 </c:choose>
 
